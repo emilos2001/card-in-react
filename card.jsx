@@ -13,7 +13,7 @@ export function CardInfo() {
         isFavorite: true
     })
     let starIcon = contact.isFavorite ? filledStar : emptyStar
-
+    let favorite = contact.isFavorite ? 'Favorite' : null
     function toggleFavorite() {
         setContact(prevContact => {
             return {
@@ -42,6 +42,7 @@ export function CardInfo() {
                     </h1>
                     <p className="contact">{contact.phone}</p>
                     <p className="contact">{contact.email}</p>
+                    <p className="contact">{favorite}</p>
                 </div>
             </article>
         </>
